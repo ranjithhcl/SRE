@@ -10,6 +10,7 @@ RUN git clone https://github.com/hashicorp/terraform.git ./ && \
 WORKDIR $GOPATH
 
 FROM alpine
+RUN apk add --no-cache  git
 COPY --from=builder /go/bin/terraform  /bin/terraform
 WORKDIR /terraform
 ENTRYPOINT ["/bin/terraform"]
