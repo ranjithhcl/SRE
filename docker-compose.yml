@@ -3,7 +3,7 @@ services:
   terraform_libs:
     image: ranjithka/terraform:0.12.17
     build: ./terraform_libs
-    entrypoint: /bin/terraform plan
+    entrypoint: /bin/terraform apply -auto-approve
     env_file:
       - aws.env
     volumes:
