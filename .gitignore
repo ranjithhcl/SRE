@@ -15,3 +15,4 @@ test_output.json
 aws.env
 .vscode
 azure.env
+*.lock*
