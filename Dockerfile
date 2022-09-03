@@ -1,5 +1,5 @@
 FROM golang:alpine as builder
-ENV TERRAFORM_VERSION=0.12.17
+ENV TERRAFORM_VERSION=1.2.8
 RUN apk add --update git bash jq coreutils curl
 ENV TF_DEV=true
 ENV TF_RELEASE=true

@@ -5,6 +5,18 @@
 Udemy:
 microsoft-azure-from-zero-to-hero-the-complete-guide
 
+Infrastructure as Code
+Policy as Code
+Configuration as Code
+Deployment as Code
+Documentation as Code
+
+![](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/enterprise-scale/media/az-scopes-billing.png)
+
+https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-billing-ad-tenant
+
+https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/considerations/automation#platform-automation-design-recommendation
+
 Link:
 <https://portal.azure.com>
 
@@ -110,7 +122,20 @@ SLA calculate:
         - Health Probes
         - Load Balancing Rules
 
-    - Application GW (similar to LB)
+    - Application GW (similar to ALB) [ Basics -> Frontends -> Backends -> configuration -> tags -> Review+create ]
+
         - Route based routing
         - WAF (firwall on request)
         - App service behind the Application GW
+
+    - Application GW infront of AKS is not recommended ?
+
+### Storage
+
+1. Azure SQL DB (Manged, Security, backup)
+    - Retention backup (7days)
+    - Geo replication
+    - Provisioned resource(pay highfront)
+    - Serverless DB
+    - Elastic Pool (multiple DB) - Cost effective
+    - Pricing ? Managed vs Azure SQL(DTU/vCores)
