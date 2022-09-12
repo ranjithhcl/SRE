@@ -133,9 +133,24 @@ SLA calculate:
 ### Storage
 
 1. Azure SQL DB (Manged, Security, backup)
+
     - Retention backup (7days)
     - Geo replication
     - Provisioned resource(pay highfront)
     - Serverless DB
     - Elastic Pool (multiple DB) - Cost effective
     - Pricing ? Managed vs Azure SQL(DTU/vCores)
+      <WIP>
+
+2. Azure Mysql
+
+    - Backup (Basic - Fullbackup everyday, General purpose upto 4GB diff backup twice a day)
+    - Pricing (Basic, GP, Memory Optimised)
+
+3. Cosmos DB
+
+4. PostgreSQL
+
+5. Azure Storage
+    - LRS (local Redundant storage), ZRS(Zone Redundant storage), GRS(Failover over geo, 3times of storage)
+    - GZRS(3 zones and geo), RA-GRS(Read-Access-Geo), RA-GZRS
