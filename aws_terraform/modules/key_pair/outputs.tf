@@ -10,9 +10,9 @@ output "this_key_pair_fingerprint" {
 
 output "this_key_pair_private_key" {
   description = "Private Key content"
-  value       = element(concat(tls_private_key.this.*.private_key_pem, list("")), 0)
+  value       = element(concat(tls_private_key.this[*].private_key_pem, list("")), 0)
   sensitive   = true
-    depends_on = [
-      tls_private_key.this,
+  depends_on = [
+    tls_private_key.this,
   ]
 }
