@@ -130,7 +130,7 @@ SLA calculate:
 
     - Application GW infront of AKS is not recommended ?
 
-### Storage
+### DB Storage
 
 1. Azure SQL DB (Manged, Security, backup)
 
@@ -147,10 +147,21 @@ SLA calculate:
     - Backup (Basic - Fullbackup everyday, General purpose upto 4GB diff backup twice a day)
     - Pricing (Basic, GP, Memory Optimised)
 
-3. Cosmos DB
+3. Cosmos DB (TODO)
 
-4. PostgreSQL
+4. PostgreSQL (TODO)
 
-5. Azure Storage
+5. Azure Storage Types (Blobs, Files, Queues, Tables)
+
+    - Account -> Container -> Blobs
     - LRS (local Redundant storage), ZRS(Zone Redundant storage), GRS(Failover over geo, 3times of storage)
     - GZRS(3 zones and geo), RA-GRS(Read-Access-Geo), RA-GZRS
+    - Hot(99.9%), Cool(99%) (atleast 30days), Archive (high access cost)
+
+    Costing:
+
+    - LRS/Hot/Capacity/Operation_cost
+    - LRS/Cool/Capacity/Operation_cost
+    - Blob access is anonymous with access tier. SAAS token to access.
+    - Access to Blob can be modified, for set of IP
+    -
